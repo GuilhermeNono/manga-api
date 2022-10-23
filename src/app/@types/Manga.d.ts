@@ -20,13 +20,13 @@ export interface MangaPages {
 }
 
 export interface MangaInfo {
-    id:any;
-    name:any;
-    link:any;
-    author:any;
-    description:any;
-    chapters_count:any;
-    image:any;
-    score:any;
+    id:string;
+    name:string;
+    link:string;
+    author:string;
+    description:string;
+    chapters_count:string;
+    image:string;
+    score:string;
     categories?:[]
 }

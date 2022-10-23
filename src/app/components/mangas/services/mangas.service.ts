@@ -37,14 +37,14 @@ const getTop = async (page:number) => {
       return parseResults(response.data);
 }
 
-const getPages = async (id:string) => {
+const getPages = async (release_id:string) => {
     const return_data:MangaInfoChapter = {"chapter_number": "", "images": [], "next_chapter": {"number":"", "release_id":""}};
 
-    const identifier = await getIdentifier(return_data, id);
+    const identifier = await getIdentifier(return_data, release_id);
 
     return await (async () => {
         try {
-            let response = await axios({url:`https://mangalivre.net/leitor/pages/${id}.json?key=${identifier}`});
+            let response = await axios({url:`https://mangalivre.net/leitor/pages/${release_id}.json?key=${identifier}`});
             return_data.images = response.data
         } catch (error) {
             console.log(error);

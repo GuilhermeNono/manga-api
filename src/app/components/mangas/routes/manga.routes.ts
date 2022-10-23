@@ -30,8 +30,8 @@ app.get('/top', (req, res) => {
     res.redirect('/top/1');
 })
 
-app.get("/pages/:id", (req, res) => {
-    const id = req.params.id;
+app.get("/pages/:release_id", (req, res) => {
+    const id = req.params.release_id;
 
     MangaController.getPages(id).then((pages) => {
         res.json(pages);

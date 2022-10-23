@@ -24,9 +24,9 @@ const getChapters = async (id:string, page:string) => {
 
 }
 
-const getMangaById = async (id:string) => {
+const getMangaById = async (release_id:string) => {
 
-    return await MangaService.getMangaById(id);
+    return await MangaService.getMangaById(release_id);
 
 }
 
