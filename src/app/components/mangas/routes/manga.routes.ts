@@ -42,9 +42,9 @@ app.get('/chapters/:id/:page', async (req, res) => {
     const id = req.params.id;
     const page = req.params.page;
 
-    var return_data:MangaPages = {chapters:[{chapter_name:"", date:"", id_release:0, number:0}], idSerie: "", name: "", urlName:""};
+    const return_data:MangaPages = {chapters:[{chapter_name:"", date:"", id_release:0, number:0}], idSerie: "", name: "", urlName:""};
 
-    var result = await MangaController.getChapters(id, page);
+    const result = await MangaController.getChapters(id, page);
 
     return_data.chapters = result.chapters;
 
