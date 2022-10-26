@@ -15,5 +15,5 @@ app.use(cors())
 router(app)
 
 app.listen(PORT, () => {
-    console.log('Server Running in http://localhost:4000')
+    console.log(`Server Running in http://localhost:${PORT}`)
 })

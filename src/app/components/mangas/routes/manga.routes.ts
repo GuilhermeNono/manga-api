@@ -62,7 +62,7 @@ app.get('/manga/:id', async (req, res) => {
     const id = req.params.id;
     const response = await MangaController.getMangaById(id);
 
-    return res.json(response);
+    return res.send(response);
 })
 
 export default app
